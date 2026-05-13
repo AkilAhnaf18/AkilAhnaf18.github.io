@@ -260,35 +260,56 @@
     }
 
     .stat-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-    }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
 
-    .stat-item {
-      background: var(--surface);
-      padding: 1.8rem;
-      transition: background 0.2s;
-    }
-    .stat-item:hover { background: var(--surface2); }
+.stat-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem;
 
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
+  min-height: 170px;
 
-    .stat-label { font-size: 0.82rem; color: var(--text-muted); }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  transition: all 0.25s ease;
+}
+
+.stat-item:hover {
+  background: var(--surface2);
+  border-color: rgba(124,109,250,0.35);
+  transform: translateY(-3px);
+}
+
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.stat-label {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
 
     .skills-container { display: flex; flex-direction: column; gap: 2.2rem; }
 
@@ -777,23 +798,36 @@
         <p>Beyond technical skills, I bring curiosity, adaptability, and a strong willingness to learn. I'm always looking to improve my knowledge, take on challenging projects, and continue growing in data, analytics, and technology-focused environments.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat-item">
-          <div class="stat-num">Tech Stack</div>
-          <div class="stat-label">Python · SQL · Power BI · Excel</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">4+</div>
-          <div class="stat-label">Projects Completed</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">Certification</div>
-          <div class="stat-label">IBM Data Science Professional Certificate</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">Education</div>
-          <div class="stat-label">UofT Applied Statistics & Neuroscience</div>
-        </div>
-      </div>
+
+  <div class="stat-item">
+    <div class="stat-num">Tech Stack</div>
+    <div class="stat-label">
+      Python · SQL · Power BI · Excel
+    </div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-num">4+</div>
+    <div class="stat-label">
+      Projects Completed
+    </div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-num">Certification</div>
+    <div class="stat-label">
+      IBM Data Science Professional Certificate
+    </div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-num">Education</div>
+    <div class="stat-label">
+      UofT Applied Statistics & Neuroscience
+    </div>
+  </div>
+
+</div>
     </div>
   </div>
 
